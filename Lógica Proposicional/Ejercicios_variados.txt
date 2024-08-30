@@ -1,0 +1,207 @@
+1. Formula proposicional reemplazando variables por los valores:
+
+[(0 v 0) <-> (¬0 ^ 1)] ⊻ [(¬0 -> ¬1) v (0 <-> ¬1)]
+
+2. 
+[( 0 <-> (¬0 ^ 1)] ⊻ [(¬0 -> ¬1) v 1]
+
+3. 
+[( 0 <-> (1 ^ 1)] ⊻ [(1 -> 0) v 1]
+
+4.
+( 0 <-> 1) ⊻ (0 v 1)
+
+5.
+( 0 <-> 1) ⊻ 1
+
+6.
+0 ⊻ 1
+
+7. 
+
+Valor de verdad = 1.
+
+--------------------------------------------------------------
+
+1. Formula proposicional reemplazando variables por los valores: 
+
+(¬1 v 0) -> [¬(1 -> ¬0) ^ ¬1]
+
+2.
+(0 v 0) -> [¬(1 -> 1) ^ 0]
+
+3.
+0 -> [¬(1 -> 1) ^ 0]
+
+4.
+0 -> (¬1 ^ 0)
+
+5.
+0 -> (0 ^ 0)
+
+6.
+0 -> 0
+
+7.
+
+Valor de verdad = 1.
+
+--------------------------------------------------------------
+Hallar el valor de verdad de las proposiciones p,q,r y s
+
+Valor de verdad esperado: 0.
+
+Mi hipótesis es que las variables tienen estos valores:
+
+p = 0
+q = 1
+
+r = 0
+s = 0
+
+(¬0 ^ 1) -> (¬0 -> 0)
+
+(1 ^ 1) -> (1 -> 0)
+
+1 -> 0
+
+Valor de verdad = 0.
+
+C: La Hipótesis se confirma.
+--------------------------------------------------------------
+
+Hallar el valor de verdad de las proposiciones: p,q,r y s 
+
+Valor de verdad esperado: 1.
+
+Mi hipótesis es que las variables tienen estos valores:
+
+p = 0
+q = 1
+
+r = 1
+s = 1
+
+¬(p v ¬r) ^ ¬(q -> ¬s)
+
+¬(0 v 0) ^ ¬(1 -> 0)
+
+¬0 ^ ¬(1 -> 0)
+
+¬0 ^ ¬0
+
+1 ^ 1
+
+Valor de verdad = 1.
+
+--------------------------------------------------------------
+
+Si p,q,r,s y t son proposiciones tales que
+
+Proposición 1: v[(p^¬r) <-> (s -> w)] = 1 
+
+Proposición 2: v(¬w -> ¬s) = 0 
+
+
+Hallar el valor de verdad de las siguientes proposiciones:
+
+A) (s <-> ¬w) -> (r v ¬p)
+B) (p v q) v (r v s)
+
+- Hipótesis de los valores para la Proposición 1:
+
+p = 
+r = 
+s = 1
+w = 0
+
+Apunte: Dado a que para "v[(p^¬r) <-> (s -> w)] = 1 " se cumpla, se necesita que "(p^¬r)" de como resultado "0"
+sin embargo, según la tabla de  la conjunción tenemos 3 casos posibles en los que se puede obtener un resultado falso, por lo que momentaneamente
+se deja como una "incognita". Se pasará a resolver continuación la Proposición A) y Proposición B), se hallará el valor para cada uno mediante "Ley De Morgan", 
+propiedad conmutativa y propiedad absorvente.
+
+- Hipótesis de los valores para la Proposición 2:
+
+w = 0
+s = 1
+
+Demostración:
+
+1. 
+(¬w -> ¬s)
+
+2.
+¬0 -> ¬1
+
+3. 
+1 -> 0
+
+Valor de Verdad = 0.
+
+C: La Hipótesis se demuestra para la Proposición 2.
+
+
+-- Abordamiento de la Proposicion A)
+
+- Hipótesis de los valores para la Proposición A:
+
+p = 
+r = 
+s = 1 (obtenido en la Proposición 2)
+w = 0 (obtenido en la Proposición 2)
+
+Demostración:
+
+  LEY DE MORGAN
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Se aplicará esta ley a la expresión de la que obtuvimos la incógnita en la Proposición 1: "(p ^ ¬r)"
+
+¬(p ^ ¬r) <=> ¬p v ¬(¬r)
+	  <=> ¬p v r 
+¬(p ^ ¬r) <=> r v ¬p <-- Propiedad conmutativa, hemos obtenido la misma expresión de la Proposición A). Sabiendo que "(p ^ ¬r)" era "0" y ahora esta negada,
+                         su resultado ahora es "1", y al ser ambas logicamente equivalentes, se concluye que "r v ¬p" es también "1".
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ (s <-> ¬w) -> (r v ¬p)
+
+ (1 <-> ¬0) -> (r v ¬p)
+
+ (1 <-> 1) -> (r v ¬p)
+
+ 1 -> (r v ¬p)   ---> El problema se puede resolver con la "Ley De Morgan" y simplificar.
+
+ 1 -> 1
+
+Valor de Verdad = 1.
+
+-- Abordamiento de la Proposicion B)
+
+(p v q) v (r v s)
+
+(p v q) v (r v 1)  -- > Revisando la tabla de verdad de la disyunción nos damos cuenta que se puede aplicar aquí la propiedad de absorción, al obtener en una 
+                        de las 2 variables el valor de "1", y sabiendo que no podemos deducir "r", no pasa nada, toda la expresión se puede deducir a "1" por medio de esta propiedad.
+
+(p v q) v 1  --> Obtenemos la misma situación que en el caso anterior, donde tenemos un disyunción con uno de los valores obtenidos en "1", por lo que aplicando nuevamente la propiedad absorvente,
+                 se puede deducir que finalmente la espresión se reduce a "1".
+
+     
+Valor de Verdad = 1.
+
+
+
+Conclusión: 
+------------------
+Tanto la Proposición A) como la Proposición B) son valores verdaderos, que se han deducido solo obteniendo los valores para "w" y "s", obtenidos de la Proposición 2.
+Mediante la aplicación de leyes como "De Morgan", propiedades conmutativas y absorventes, se logrado llegar a dicha conclusión. Otro apunte a tener en cuenta es que, 
+como en la expresión anterior, vemos similitudes entre proposiciones, es probable que aplicando la "Ley de Morgan" y otras propiedades, obtengamos la una a partir de la otra,
+como en el caso de "(p^¬r)" en la Proposición 1 y "r v ¬p" en la Proposición A).
+
+
+
+
+
+
+
+
