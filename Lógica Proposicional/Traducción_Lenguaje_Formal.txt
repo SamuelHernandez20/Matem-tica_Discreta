@@ -1,0 +1,44 @@
+Simbolizar la siguiente proposicion:
+
+"El juez lo sentencia a Pedro si y solo si el fiscal puede probar su culpabilidad o el testigo no dice la verdad"
+
+- Identificación de Proposiciones:
+
+ p = "El juez lo sentencia a Pedro"
+ q = "El fiscal puede probar la culpabilidad de Pedro"
+ r = "El testigo dice la verdad"
+
+- Traducción a Lenguaje simbolico:
+
+ p <-> (q v ¬r) <=> R
+
+
+- Construir la Tabla de verdad para la proposición anterior utilizando el Método Directo:
+             
+ ---------------------------------
+ | p | q | r | ¬r | (q v ¬r) | R |
+ ---------------------------------
+ | 1 | 1 | 1 | 0  |   1      | 1 |
+ ---------------------------------
+ | 1 | 1 | 0 | 1  |   1      | 1 |
+ ---------------------------------
+ | 1 | 0 | 1 | 0  |   0      | 0 | 
+ ---------------------------------
+ | 1 | 0 | 0 | 1  |   1      | 1 |
+ ---------------------------------
+ | 0 | 1 | 1 | 0  |   1      | 0 |
+ ---------------------------------
+ | 0 | 1 | 0 | 1  |   1      | 0 |
+ ---------------------------------
+ | 0 | 0 | 1 | 0  |   0      | 1 |
+ ---------------------------------
+ | 0 | 0 | 0 | 1  |   1      | 0 |
+ ---------------------------------
+
+ - Según el resultado de la Tabla de Verdad para la formula proposicional "p <-> (q v ¬r", se obtiene una Contingencia.
+ 
+
+
+
+
+

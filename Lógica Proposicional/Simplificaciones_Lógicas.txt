@@ -1,0 +1,29 @@
+-- 1
+
+Simplificar: [(p∧(p∨q))→(¬(p∧r))]∧[(p∨¬p)∨(q∧¬q)]
+
+<=> [ p → (¬(p∧r))]∧[(p∨¬p)∨(q∧¬q)] Ley de Absorción.
+
+<=> [p → (¬p∨¬r)] ∧ [(p∨¬p)∨(q∧¬q)] Ley de De Morgan.
+
+<=> ¬[p ∨ (¬p∨¬r)] ∧ [(p∨¬p)∨(q∧¬q)] Ley de la Condicional.
+
+<=> ¬p ∧ (p∧r) ∧ [(p∨¬p)∨(q∧¬q)] Ley de De Morgan.
+
+Al detectarse anteriormente un contradicción no se continua simplificando.
+
+-- 2
+
+Simplificar: [(p∧q)→(r∨¬s)]∧[¬(p∧¬r)∨(q∧s)]
+
+<=> [(p∧q)→(r∨¬s)]∧[(¬p∨r)∨(q∧s)] Ley de De Morgan.
+
+<=>[¬(p∧q)∨(r∨¬s)] ∧[(¬p∨r)∨(q∧s)] Ley de la Condicional.
+
+<=> [(¬p∨¬q)∨(r∨¬s)] ∧ [(¬p∨r)∨(q∧s)] Ley de De Morgan.
+
+<=> (¬p∨¬q ∨ r∨¬s) ∧ [(¬p∨r)∨(q∧s)] Asociatividad.
+
+
+
+
