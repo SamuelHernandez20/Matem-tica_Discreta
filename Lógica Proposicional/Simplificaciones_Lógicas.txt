@@ -38,17 +38,17 @@ Simplificar: [(p∧q)→(r∨¬s)]∧[¬(p∧¬r)∨(q∧s)]
 
 Simplificar: [¬(p v q) v (p v ¬r)] → [r ^ (r v ¬t)]
 
-<=> [¬(p v q) v (p v ¬r)] → r    Ley de Absorción
+<=> [¬(p v q) v (p v ¬r)] → r    Ley de Absorción.
 
-<=> [(¬p ^ ¬q) v (p v ¬r)] → r   Ley de Morgan
+<=> [(¬p ^ ¬q) v (p v ¬r)] → r   Ley de Morgan.
 
-<=> ¬[(¬p ^ ¬q) v (p v ¬r)] v r Ley de la Condicional
+<=> ¬[(¬p ^ ¬q) v (p v ¬r)] v r Ley de la Condicional.
 
-<=> [(p v q) ^ (¬p ^ r)] v r Ley de Morgan
+<=> [(p v q) ^ (¬p ^ r)] v r Ley de Morgan.
 
-<=> {[(p v q) ^ ¬p)] ^ r} v r Asociatividad
+<=> {[(p v q) ^ ¬p)] ^ r} v r Asociatividad.
 
-<=> r  Ley de absorción
+<=> r  Ley de absorción.
 
 
 
