@@ -10,7 +10,17 @@ Simplificar: [(p∧(p∨q))→(¬(p∧r))]∧[(p∨¬p)∨(q∧¬q)]
 
 <=> ¬p ∧ (p∧r) ∧ [(p∨¬p)∨(q∧¬q)] Ley de De Morgan.
 
-Al detectarse anteriormente un contradicción no se continua simplificando.
+<=> ¬p ∧ (p∧r) ∧ T Ley de Complemento.
+
+<=> ¬p ∧ (p∧r) Ley de Identidad.
+ 
+<=>  (¬p ∧ p) ∧ (¬p ∧ r)  Asociatividad.
+
+<=>  F ∧ (¬p ∧ r) Ley de Complemento.
+
+<=> F Ley de Identidad.
+
+
 
 -- 2
 
