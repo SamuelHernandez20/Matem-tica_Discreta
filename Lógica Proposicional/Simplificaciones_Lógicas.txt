@@ -51,6 +51,118 @@ Simplificar: [¬(p v q) v (p v ¬r)] → [r ^ (r v ¬t)]
 <=> r  Ley de absorción.
 
 
+--------------------------------------------------
+
+[(p^q) v (p^¬q)] v (¬p^¬q) Respuesta debe ser: "p v ¬q".
+
+p v (¬p^¬q) Ley de Arcus.
+
+p v ¬q Absorción parcial.
+
+
+--------------------------------------------------
+
+[q ^ (q -> ¬p) ] -> ¬(p^q)  Respuesta debe ser: "T".
+
+[q ^ (¬q v ¬p) ] -> ¬(p^q)  Ley condicional.
+
+[ (q ^ ¬p) ] -> ¬(p^q)  Aborcion parcial.
+
+¬(q^¬p) v ¬(p^q) Ley condicional.
+
+(¬q v p) v (¬p v ¬q)  Ley de Morgan.
+
+(¬q v ¬q) v (p v ¬p) Asociatividad.
+
+ F v T  Ley de complemento
+
+Resultado : "T"
+
+--------------------------------------------------
+
+[ (p ^ ¬q) v (p ^ q) ] -> (¬p ^ ¬q) Respuesta debe ser: "¬p".
+
+
+¬[ (p ^ ¬q) v (p ^ q) ] v (¬p ^ ¬q) Ley de la Condicional
+
+[ ¬(p ^ ¬q) ^ ¬(p ^ q) ] v (¬p ^ ¬q) Ley de Morgan
+
+[ (¬p v q) ^ (¬p v ¬q) ] v (¬p ^ ¬q) Ley de Morgan
+
+¬p v (¬p ^ ¬q) Ley de Absorción Total.
+
+"¬p" Ley de Absorción Total.
+
+
+---------------- Reto en 3 pasos llegar a "q"----------------
+
+
+¬{ [ q -> (¬r ^ p)] ^ ¬q }
+
+1. { ¬[ ¬q v (¬r ^ p) ] ^ q } Ley condicional y Morgan
+
+2. (q ^ r) ^ (p ^ q)  Morgan y Asociatividad
+
+3. "q" Absorción total.
+
+----------------------------------------------------------------
+
+	
+(p → q) ∧ (p ⊕ q)
+
+(p → q) ∧ ¬(p <-> q) Ley de Disyunción Exclusiva.
+
+(p → q) ∧ [ ¬(p -> q) ^ ¬(q -> p) ] Ley de la Bincondicional.
+
+(p → q) ∧ [ (p ^ q) ^ (q ^ p) ] Ley de la Condicional negada.
+
+(¬p v q) ∧ [ (p ^ q) ^ (q ^ p) ] Ley de la Condicional.
+
+(¬p v q) ∧ (p ^ q) Simplificación. <-- hablo de esta donde era " [ (p ^ q) ^ (q ^ p) ]"
+
+"q" Absorción Total. 
+
+-----------------------------------------------------------
+
+Ejercicio más "complejo" de simplificación lógica:
+
+[ ( p↔q )∨( a⊕s )]∧[ ¬ ( p⊕o )∨( q↔s ) ]
+
+[( p <-> q )∨ ¬( a <-> s )]∧[  ¬(p <-> o )∨( q <-> s )] Ley disyunción Exclusiva.
+
+[[ ( p -> q ) ^ ( q -> p ) ] ∨ [ ¬( a -> s ) ^ ¬( s -> a ) ]] ∧ [[ ¬(p -> o ) ^ ¬(o -> p) ] ∨ [ ( q -> s ) ^ ( s -> q ) ]] Ley de La bicondicional.
+
+[[ ( p -> q ) ^ ( q -> p ) ] ∨ [ ( a ^ ¬s ) ^ ( s ^ ¬a ) ]] ∧ [[ (p ^ ¬o ) ^ (o ^ ¬p) ] ∨ [ ( q -> s ) ^ ( s -> q ) ]] Ley de la condicional negada.
+
+[[ ( ¬p v q ) ^ ( ¬q v p ) ] ∨ [ ( a ^ ¬s ) ^ ( s ^ ¬a ) ] ] ∧ [[ (p ^ ¬o ) ^ (o ^ ¬p) ] ∨ [ ( ¬q v s ) ^ ( ¬s v q ) ]] Ley de la condicional.
+
+[[ ( ¬p v q ) ^ ( ¬q v p ) ] ∨ [ ( a ^ ¬a ) ^ ( ¬s ^  s ) ] ∧ [ ( p ^ ¬p) ^ (¬o ^ o)  ] ∨ [ ( ¬q v s ) ^ ( ¬s v q ) ]] Asociatividad.
+
+[[ ( ¬p v q ) ^ ( ¬q v p ) ] ∨  F  ∨ [ ( ¬q v s ) ^ ( ¬s v q ) ]] Simplificación de elementos asociados, Idempotencia.
+
+[ ( ¬p ^ ¬q ) v ( ¬p ^ p ) v ( q ^ ¬q ) v ( q ^ p ) ] ∨  F  ∨ [( ¬q ^ ¬s ) v ( ¬q ^ q ) v ( s ^ ¬s ) v ( s ^ q )] Distributividad.
+
+[ ( ¬p ^ ¬q ) v F  v  F v ( q ^ p ) ] ∨  F  ∨ [ ( ¬q ^ ¬s ) v F v F v ( s ^ q ) ]  Ley de Complemento.
+
+[ ( ¬p ^ ¬q ) v ( q ^ p ) ] v F v [ ( ¬q ^ ¬s )v ( s ^ q ) ]  Asociatividad, Idempotencia.
+
+(p ⊕ q ) v ( s ⊕ q )  Simplificación a Disyunción Exclusiva.
+
+¬(p <-> q ) v ¬(s <-> q) Ley de Disyunción Exclusiva.
+
+[ ¬(p -> q) ^ ¬(q -> p) ] v [ ¬(s -> q) ^ ¬(q -> s)] Ley de la Bicondicional.
+
+[ (p ^ ¬q) ^ (q ^ ¬p) ] v [ (s ^ ¬q) ^ (q ^ ¬s)] Ley de la Condicional negada.
+
+ F  v  F Asociatividad, Ley de Complemento.
+
+ "F" Idempotencia.
+
+ Resultado: "F".
+
+-----------------------------------------------------------
+
+
 
 
 
